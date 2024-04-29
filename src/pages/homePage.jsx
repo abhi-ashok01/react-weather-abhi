@@ -29,9 +29,10 @@ const HomePage = () => {
         if(!location) {
             alert('no location')
         } else {
-            setLocationName(`${location.city}, ${location.country}`)
+            console.log(location);
+            setLocationName(`${location.city}, ${location.country_name}`)
             try {
-                const w_data = await GetWeatherData(location.lat, location.lon);
+                const w_data = await GetWeatherData(location.latitude, location.longitude);
                 setCurrentData(w_data);
             } catch (e) {
                 alert(e)

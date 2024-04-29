@@ -1,6 +1,6 @@
-const url = 'http://ip-api.com/json/';
+const url2 = 'https://ipapi.co/json';
 
 export default async function GetIpLocation() {
-    const res = await fetch(url);
+    const res = await fetch(url2);
     return await res.json();
 }
